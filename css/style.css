@@ -1,0 +1,192 @@
+a:link, a:visited {
+	text-decoration: none;
+	color: black;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	height: 100%;
+
+	display: flex;
+	flex-direction: row;
+}
+
+div#sidebar {
+	background-color: #E34237;
+	box-shadow: 0 0 5px grey;
+
+	color: white;
+
+	flex-basis: 300px;
+	flex-shrink: 0;
+	flex-grow: 0;
+
+	display: flex;
+	flex-direction: column;
+}
+
+div#sidebar a:link, div#sidebar a:visited {
+	color: white;
+}
+
+#logo {
+	padding: 50px 50px 0 50px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+#slogun {
+	text-align: center;
+	padding: 10px 50px;
+}
+
+nav {
+	flex-grow: 1;
+	padding: 50px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+ul#categories {
+	margin: 0;
+	padding: 0;
+}
+
+ul#categories li {
+	padding: 10px;
+	list-style-type: none;
+	font-size: 17pt;
+	border-radius: 5px;
+	/* cursor: pointer; */
+
+	transition: background-color 0.2s, color 0.2s;
+}
+ul#categories li a {
+	transition: color 0.2s;
+}
+ul#categories li:hover {
+	background-color: white;
+	color: black;
+}
+ul#categories li:hover a {
+	color: black;
+}
+
+main {
+	flex-grow: 1;
+	flex-shrink: 1;
+	padding: 50px;
+	box-sizing: border-box;
+	overflow-y: scroll;
+}
+main > div {
+	margin: 0 0 50px 0;
+}
+main > div:last-child {
+	margin: 0;
+}
+
+main footer {
+	text-align: center;
+}
+
+div#banner {
+	height: 500px;
+	background-image: url('/assets/img/test_bg.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	text-align: center;
+}
+
+.post_header {
+	font-size: 10pt;
+	color: #777777;
+}
+
+.post_categories {
+	float: left;
+}
+
+.post_date {
+	float: right;
+}
+
+.post_title {
+	clear: both;
+	font-size: 25pt;
+	padding: 10px 0;
+}
+
+.post_title a:link, .post_title a:visited {
+	color: black;
+	text-decoration: none;
+}
+
+.post_tag {
+	border-radius: 5px;
+	background: #dddddd;
+	padding: 3px 5px;
+	font-size: 10pt;
+	color: #555555;
+}
+
+.post_content {
+	padding: 10px 0;
+}
+
+.paginator {
+	display: flex;
+	flex-direction: row;
+}
+.paginator_previous, .paginator_next {
+	flex: 3;
+}
+.paginator_current {
+	text-align: center;
+
+	flex: 1;
+}
+.paginator_previous {
+	text-align: right;
+}
+.paginator_next {
+	text-align: left;
+}
+
+.executives .year, .members .year, .history_year {
+	background: rgba(227, 66, 55, 0.9);
+	border-radius: 5px;
+	padding: 3px 7px;
+	color: white;
+}
+
+.member_card {
+	border: 1px solid #E34237;
+	border-top: 10px solid #E34237;
+	border-radius: 5px;
+	margin: 0 0 50px 0;
+	padding: 20px;
+}
+
+.member_card header {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.member_card div.profile_picture {
+	flex-basis: 100px;
+}
+
+.member_card div.name {
+	flex: 1 1 auto;
+}
+
+.member_name, .member_nickname {
+	margin: 10px 0;
+}

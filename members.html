@@ -1,0 +1,52 @@
+---
+layout: default
+---
+
+<h1>임원진</h1>
+{% for executives_hash in site.data.executives %}
+{% assign year = executives_hash[0] %}
+{% assign executives = executives_hash[1] %}
+<div class="executives">
+	<h2 class="year">{{ year }}</h2>
+	<p class="executive president">회장: {{ executives.president }}</p>
+	<p class="executive vice_president">부회장: {{ executives.vice_president }}</p>
+	<p class="executive treaturer">총무: {{ executives.treasurer }}</p>
+	<p class="executive academic_director">학술부장: {{ executives.academic_director }}</p>
+</div>
+{% endfor %}
+
+<h1>구성원</h1>
+
+{% for members_hash in site.data.members %}
+{% assign year = members_hash[0] %}
+{% assign members = members_hash[1] %}
+<div class="members">
+	<h2 class="year">{{ year }}</h2>
+	<ul>
+		{% for member in members %}
+		<li><b>{{ member.name }}</b>, {{ member.nickname }}</li>
+		{% endfor %}
+	</ul>
+</div>
+{% endfor %}
+
+<h1>맴버카드</h1>
+
+{% for member in site.members %}
+<div class="member_card">
+	<header>
+		<div class="profile_picture">
+			<svg height="80" width="80">
+				<circle cx="40" cy="40" r="40" fill="#E34237"/>
+			</svg>
+		</div>
+		<div class="name">
+			<h1 class="member_name">{{ member.name }}</h1>
+			<h2 class="member_nickname">@{{ member.nickname }}</h2>
+		</div>
+	</header>
+	<section>
+		{{ member.content }}
+	</section>
+</div>
+{% endfor %}

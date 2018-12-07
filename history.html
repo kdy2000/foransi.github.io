@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<h1>연혁</h1>
+
+{% for years in site.data.history %}
+{% assign year = years[0] %}
+<h2 class="history_year">{{ year }}년</h2>
+
+{% for months in years[1] %}
+{% assign month = months[0] %}
+<h3>{{ month }}월</h3>
+
+<ul>
+	{% for history in months[1] %}
+	<li>{{ history }}</li>
+	{% endfor %}
+</ul>
+
+{% endfor %}
+
+{% endfor %}

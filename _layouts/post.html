@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+<article>
+	<header class="post_header">
+		<span class="post_categories">{{ page.categories | join: ' ' }}</span>
+		<span class="post_date">{{ page.date }}</span>
+		<h1 class="post_title">{{ page.title }}</h1>
+	</header>
+	<section class="post_content">
+		{{ content }}
+	</section>
+</article>

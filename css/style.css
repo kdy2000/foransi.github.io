@@ -15,15 +15,23 @@ body {
 	flex-direction: row;
 }
 
+@media only screen and (max-width: 600px) {
+	body {
+		flex-direction: column;
+	}
+
+	div#sidebar {
+		flex: 0 0 100px;
+	}
+}
+
 div#sidebar {
 	background-color: #E34237;
 	box-shadow: 0 0 5px grey;
 
 	color: white;
 
-	flex-basis: 300px;
-	flex-shrink: 0;
-	flex-grow: 0;
+	flex: 0 0 300px;
 
 	display: flex;
 	flex-direction: column;
@@ -66,7 +74,9 @@ ul#categories li {
 	transition: background-color 0.2s, color 0.2s;
 }
 ul#categories li a {
-	transition: color 0.2s;
+	position: relative;
+	left: 0px;
+	transition: color 0.2s, left 0.2s;
 }
 ul#categories li:hover {
 	background-color: white;
@@ -74,33 +84,59 @@ ul#categories li:hover {
 }
 ul#categories li:hover a {
 	color: black;
+	left: 15px;
 }
 
 main {
 	flex-grow: 1;
 	flex-shrink: 1;
-	padding: 50px;
 	box-sizing: border-box;
 	overflow-y: scroll;
 }
-main > div {
-	margin: 0 0 50px 0;
-}
-main > div:last-child {
-	margin: 0;
+
+main > .component {
+	margin: 50px;
 }
 
 main footer {
 	text-align: center;
 }
 
+@keyframes showup {
+	from {
+		opacity: 0;
+		bottom: 30px;
+	}
+	to {
+		opacity: 1;
+		bottom: 0;
+	}
+}
+.showup {
+	animation-duration: 2s;
+	animation-name: showup;
+	position: relative;
+}
+
 div#banner {
-	height: 500px;
+	margin: 50px 0;
+	
+	height: 350px;
+
 	background-image: url('/assets/img/test_bg.jpg');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
+
 	text-align: center;
+	color: white;
+	font-size: 50pt;
+	text-shadow: 0 0 30px black;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
 .post_header {
@@ -120,6 +156,7 @@ div#banner {
 	clear: both;
 	font-size: 25pt;
 	padding: 10px 0;
+	color: black;
 }
 
 .post_title a:link, .post_title a:visited {
@@ -189,4 +226,17 @@ div#banner {
 
 .member_name, .member_nickname {
 	margin: 10px 0;
+}
+
+#introduction section {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin: 50px 0;
+}
+#introduction section > div {
+	flex: 1;
+}
+#introduction section > :first-child {
+	margin-right: 50px;
 }

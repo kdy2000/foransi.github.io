@@ -4,19 +4,21 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>{{ page.title }}</title>
 		<link rel="stylesheet" href="/css/style.css">
 		<link rel="shortcut icon" href="/assets/favicon.ico">
 	</head>
 	<body>
 		<div id="sidebar">
-			<a href="/"><img id="logo" src="/assets/img/ansi-logo.svg"></a>
+			<img id="logo" src="/assets/img/ansi-logo.svg">
 			<span id="slogun">Analyze It N' Solve It! @ AjouUniv </span>
 			<nav>
 				<ul id="categories">
-					<li><a href="/introduction">소개</a></li>
-					<li><a href="/history">연혁</a></li>
+					<li><a href="/">홈</a></li>
+					<li><a href="/blog">블로그</a></li>
 					<li><a href="/members">구성원</a></li>
+					<li><a href="/history">연혁</a></li>
 				</ul>
 				{% assign post_categories = site.posts | map: "categories" %}
 
@@ -35,10 +37,10 @@
 			</nav>
 		</div>
 		<main>
-			{{ content }}
-			<footer>
-				Copyright 2018. A.N.S.I All rights reserved.
-			</footer>
+		{{ content }}
+		<footer class="component">
+			Copyright 2018. A.N.S.I All rights reserved.
+		</footer>
 		</main>
 	</body>
 </html>

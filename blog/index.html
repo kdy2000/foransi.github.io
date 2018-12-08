@@ -1,11 +1,12 @@
 ---
 layout: default
+title: 블로그
 ---
 
 {% include paginator.html %}
 
 {% for post in paginator.posts %}
-<div class="post_preview">
+<div class="post_preview component">
 	<header class="post_header">
 		<span class="post_categories">{{ post.categories | join: '/' }}</span>
 		<span class="post_date">{{ post.date }}</span>

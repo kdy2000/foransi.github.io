@@ -15,20 +15,54 @@ body {
 	flex-direction: row;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
 	body {
 		flex-direction: column;
 	}
 
-	div#sidebar {
-		flex: 0 0 100px;
+	body > div#sidebar {
+		flex-basis: auto;
+		padding: 25px;
+	}
+
+	div#sidebar nav {
+		margin-top: 25px;
+	}
+
+	#logo {
+		height: 70px;
+	}
+
+	main > div#banner {
+		font-size: 40pt;
+	}
+
+	#categories {
+		text-align: center;
+	}
+	#categories li {
+		display: inline;
+	}
+
+	div#introduction section {
+		flex-direction: column;
+	}
+
+	div#introduction section > :first-child {
+		margin: 0;
+	}
+
+	div#introduction section img {
+		width: 100%;
 	}
 }
 
 div#sidebar {
-	background-color: #E34237;
+	background-color: #E34437;
 	box-shadow: 0 0 5px grey;
 
+	padding: 50px;
+	box-sizing: border-box;
 	color: white;
 
 	flex: 0 0 300px;
@@ -42,21 +76,21 @@ div#sidebar a:link, div#sidebar a:visited {
 }
 
 #logo {
-	padding: 50px 50px 0 50px;
 	width: 100%;
 	box-sizing: border-box;
 }
 
 #slogun {
 	text-align: center;
-	padding: 10px 50px;
+	margin: 10px 0;
 }
 
 nav {
 	flex-grow: 1;
-	padding: 50px;
+	margin-top: 50px;
 	width: 100%;
 	box-sizing: border-box;
+	overflow-y: auto;
 }
 
 ul#categories {
@@ -120,6 +154,8 @@ main footer {
 
 div#banner {
 	margin: 50px 0;
+	padding: 50px;
+	box-sizing: border-box;
 	
 	height: 350px;
 
@@ -131,7 +167,7 @@ div#banner {
 	text-align: center;
 	color: white;
 	font-size: 50pt;
-	text-shadow: 0 0 30px black;
+	text-shadow: 0 0 30px #666666;
 
 	display: flex;
 	flex-direction: column;
@@ -196,7 +232,7 @@ div#banner {
 }
 
 .executives .year, .members .year, .history_year {
-	background: rgba(227, 66, 55, 0.9);
+	background: #E34437;
 	border-radius: 5px;
 	padding: 3px 7px;
 	color: white;
@@ -234,8 +270,15 @@ div#banner {
 	align-items: center;
 	margin: 50px 0;
 }
-#introduction section > div {
+#introduction section h1 {
+	font-size: 25pt;
+}
+#introduction section > img {
 	flex: 1;
+	width: 0;
+}
+#introduction section > div {
+	flex: 2;
 }
 #introduction section > :first-child {
 	margin-right: 50px;

@@ -20,27 +20,11 @@
 					<li><a href="/members">구성원</a></li>
 					<li><a href="/history">연혁</a></li>
 				</ul>
-				{% assign post_categories = site.posts | map: "categories" %}
-
-				{% capture tmp %}
-				{% for category in post_categories %}
-				{{ category | join: '/'}}
-				{% endfor %}
-				{% endcapture %}
-				{% assign site_categories = tmp | split: ' ' | uniq %}
-
-				<ul id="categories">
-					{% for category in site_categories %}
-					<li>{{ category | join: ', ' }}</li>
-					{% endfor %}
-				</ul>
 			</nav>
 		</div>
 		<main>
 		{{ content }}
-		<footer class="component">
-			Copyright 2018. A.N.S.I All rights reserved.
-		</footer>
+		{% include footer.html %}
 		</main>
 	</body>
 </html>

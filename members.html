@@ -5,9 +5,15 @@ title: 구성원
 
 <div class="component">
 	<h1>임원진</h1>
+	{% assign years = "" | split: "" %}
 	{% for executives_hash in site.data.executives %}
-	{% assign year = executives_hash[0] %}
-	{% assign executives = executives_hash[1] %}
+	{% assign years = years | push: executives_hash[0] %}
+	{% endfor %}
+
+	{% assign years = years | sort | reverse %}
+
+	{% for year in years %}
+	{% assign executives = site.data.executives[year] %}
 	<div class="executives">
 		<h2 class="year">{{ year }}</h2>
 		<p class="executive president">회장: {{ executives.president }}</p>
@@ -18,10 +24,15 @@ title: 구성원
 	{% endfor %}
 
 	<h1>구성원</h1>
-
+	{% assign years = "" | split: "" %}
 	{% for members_hash in site.data.members %}
-	{% assign year = members_hash[0] %}
-	{% assign members = members_hash[1] %}
+	{% assign years = years | push: members_hash[0] %}
+	{% endfor %}
+
+	{% assign years = years | sort | reverse %}
+
+	{% for year in years %}
+	{% assign members = site.data.members[year] %}
 	<div class="members">
 		<h2 class="year">{{ year }}</h2>
 		<ul>

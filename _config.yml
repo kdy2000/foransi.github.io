@@ -24,6 +24,10 @@ github_username:  rlj1202
 
 paginate: 4
 paginate_path: "/blog/page/:num/"
+# custom setting to use in pagination
+paginate_root: "/blog"
+
+excerpt_separator: <!--more-->
 
 collections:
     - members

@@ -13,14 +13,17 @@ title: 블로그
 		<h1 class="post_title">
 			<a href="{{ post.url }}">{{ post.title }}</a>
 		</h1>
+		{% if post.tags.size > 0 %}
 		<div class="post_tags">
 			{% for tag in post.tags %}
 			<span class="post_tag">#{{ tag }}</span>
 			{% endfor %}
 		</div>
+		{% endif %}
 	</header>
 	<section class="post_content post_preview_content">
-		<p>{{ post.content | truncate: '300' }}</p>
+		<p>{{ post.excerpt }}</p>
+		...
 	</section>
 </div>
 {% endfor %}

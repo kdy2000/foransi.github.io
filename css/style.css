@@ -1,10 +1,29 @@
-a:link, a:visited {
+:root {
+	--ansi-red: #E1443D;
+	--ansi-black: #383131;
+	--ansi-white: #F6F1F1;
+	--ansi-cyan: #75B5C4;
+	--ansi-yellow: #EEE273;
+	--ansi-green: #A6D3B2;
+	--ansi-brown: #D5C195;
+}
+
+a, a:link, a:visited, a:hover, a:active {
 	text-decoration: none;
-	color: black;
+	color: var(--ansi-white);
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+pre {
+	margin: 0;
 }
 
 html {
 	height: 100%;
+	background-color: var(--ansi-white);
 }
 
 body {
@@ -13,6 +32,8 @@ body {
 
 	display: flex;
 	flex-direction: row;
+
+	font-family: 'Noto Sans KR', sans-serif;
 }
 
 @media only screen and (max-width: 900px) {
@@ -39,9 +60,14 @@ body {
 
 	#categories {
 		text-align: center;
+
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
 	}
-	#categories li {
-		display: inline;
+	ul#categories li {
+		display: inline-block;
+		padding-right: 40px;
 	}
 
 	div#introduction section {
@@ -58,12 +84,12 @@ body {
 }
 
 div#sidebar {
-	background-color: #E34437;
-	box-shadow: 0 0 5px grey;
+	background-color: var(--ansi-red);
+	/* box-shadow: 0 0 5px grey; */
 
 	padding: 50px;
 	box-sizing: border-box;
-	color: white;
+	color: var(--ansi-white);
 
 	flex: 0 0 300px;
 
@@ -72,7 +98,7 @@ div#sidebar {
 }
 
 div#sidebar a:link, div#sidebar a:visited {
-	color: white;
+	color: var(--ansi-white);
 }
 
 #logo {
@@ -82,6 +108,7 @@ div#sidebar a:link, div#sidebar a:visited {
 
 #slogun {
 	text-align: center;
+	/* font-weight: lighter; */
 	margin: 10px 0;
 }
 
@@ -93,31 +120,31 @@ nav {
 	overflow-y: auto;
 }
 
-ul#categories {
+#categories {
 	margin: 0;
 	padding: 0;
 }
-
-ul#categories li {
+#categories li {
 	padding: 10px;
 	list-style-type: none;
 	font-size: 17pt;
+	/* font-weight: lighter; */
 	border-radius: 5px;
 	/* cursor: pointer; */
 
 	transition: background-color 0.2s, color 0.2s;
 }
-ul#categories li a {
+#categories li a {
 	position: relative;
 	left: 0px;
 	transition: color 0.2s, left 0.2s;
 }
-ul#categories li:hover {
-	background-color: white;
-	color: black;
+#categories li:hover {
+	background-color: var(--ansi-white);
+	color: var(--ansi-black);
 }
-ul#categories li:hover a {
-	color: black;
+#categories li:hover a {
+	color: var(--ansi-black);
 	left: 15px;
 }
 
@@ -152,7 +179,7 @@ main footer {
 	position: relative;
 }
 
-div#banner {
+#banner {
 	margin: 50px 0;
 	padding: 50px;
 	box-sizing: border-box;
@@ -165,60 +192,126 @@ div#banner {
 	background-size: cover;
 
 	text-align: center;
-	color: white;
-	font-size: 50pt;
-	text-shadow: 0 0 30px #666666;
+	color: #F6F1F1;
+	font-size: 45pt;
+	/* text-shadow: 0 0 30px #666666; */
+	font-weight: lighter;
 
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+
+	position: relative;
+}
+#banner:before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+#banner span {
+	z-index: 1;
 }
 
 .post_header {
-	font-size: 10pt;
-	color: #777777;
+	font-size: 9pt;
+	color: var(--ansi-black);
+	margin: 30px 0;
 }
 
 .post_categories {
 	float: left;
+	margin: 10px 0;
 }
 
 .post_date {
 	float: right;
+	margin: 10px 0;
 }
 
 .post_title {
 	clear: both;
-	font-size: 25pt;
-	padding: 10px 0;
-	color: black;
+	font-size: 18pt;
+	/* padding: 10px 0; */
+	margin: 15px 0;
+	color: var(--ansi-black);
 }
 
 .post_title a:link, .post_title a:visited {
-	color: black;
+	color: var(--ansi-black);
 	text-decoration: none;
+}
+
+.post_tags {
+	margin: 15px 0;
 }
 
 .post_tag {
 	border-radius: 5px;
-	background: #dddddd;
-	padding: 3px 5px;
-	font-size: 10pt;
-	color: #555555;
+	background-color: var(--ansi-brown);
+	padding: 1px 5px;
+	/* font-size: 10pt; */
+	color: var(--ansi-white);
+	box-sizing: border-box;
 }
 
 .post_content {
-	padding: 10px 0;
+	/* padding: 10px 0; */
+	margin: 20px 0;
+}
+.post_content a {
+	color: #0000ff;
+}
+.post_content h1 {
+	font-size: 27px;
+}
+
+.highlighter-rouge {
+	background-color: #00000011;
+	border-radius: 5px;
+}
+div.highlight {
+	padding: 15px;
+	overflow-x: auto;
+}
+code.highlighter-rouge {
+	padding: 3px;
+}
+code {
+	font-family: 'Nanum Gothic Coding', monospace, 'Consolas', monospace;
+}
+code .mi {
+	color: #a8932d;
+}
+code .cp {
+	color: #777777;
+}
+code .kt, code .k {
+	color: #880088;
+	font-weight: bold;
+}
+code .c1 {
+	color: #009900;
+}
+code .s, code .se {
+	color: #0000cc;
 }
 
 .paginator {
 	display: flex;
 	flex-direction: row;
 }
+
 .paginator_previous, .paginator_next {
 	flex: 3;
 }
+.paginator_previous a:link, .paginator_previous a:visited
+, .paginator_next a:link, .paginator_next a:visited {
+	color: var(--ansi-black);
+}
+
 .paginator_current {
 	text-align: center;
 
@@ -232,15 +325,15 @@ div#banner {
 }
 
 .executives .year, .members .year, .history_year {
-	background: #E34437;
+	background: var(--ansi-brown);
 	border-radius: 5px;
 	padding: 3px 7px;
-	color: white;
+	color: var(--ansi-white);
 }
 
 .member_card {
-	border: 1px solid #E34237;
-	border-top: 10px solid #E34237;
+	border: 1px solid var(--ansi-red);
+	border-top: 10px solid var(--ansi-red);
 	border-radius: 5px;
 	margin: 0 0 50px 0;
 	padding: 20px;

@@ -18,4 +18,36 @@
 	</span>
 
 	{% endif %}
+
+	<!-- test -->
+	<!--
+	<div>
+		{% if paginator %}
+
+		{% assign start = paginator.page | minus: 2 %}
+		{% assign end = paginator.page | plus: 2 %}
+
+		{% if start < 1 %}
+			{% assign start = 1 %}
+		{% endif %}
+
+		{% if end > paginator.total_pages %}
+			{% assign end = paginator.total_pages %}
+		{% endif %}
+
+		<p>
+		{% for page in (start..end) %}
+			{% if page == 1 %}
+				{% assign url = site.paginate_root %}
+			{% else %}
+				{% assign url = site.paginate_path | replace: ':num', page %}
+			{% endif %}
+
+			<a href="{{ url }}">{{ page }}</a>
+		{% endfor %}
+		</p>
+
+		{% endif %}
+	</div>
+	-->
 </div>

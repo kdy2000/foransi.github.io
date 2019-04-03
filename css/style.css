@@ -244,7 +244,13 @@ main footer {
 	text-decoration: none;
 }
 
+.post_author {
+	float: right;
+	margin: 15px 0;
+}
+
 .post_tags {
+	clear: both;
 	margin: 15px 0;
 }
 

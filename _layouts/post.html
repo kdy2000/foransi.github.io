@@ -7,6 +7,11 @@ layout: default
 		<span class="post_categories">{{ page.categories | join: ' ' }}</span>
 		<span class="post_date">{{ page.date }}</span>
 		<h1 class="post_title">{{ page.title }}</h1>
+		<span class="post_author">
+			{% if page.author %}
+				글쓴이: {{ page.author }}
+			{% endif %}
+		</span>
 		<div class="post_tags">
 			{% for tag in page.tags %}
 			<span class="post_tag">#{{ tag }}</span>

@@ -1,0 +1,19 @@
+<header class="post_header">
+	<span class="post_categories">{{ include.categories | join: ' ' }}</span>
+	<span class="post_date">{{ include.date }}</span>
+	<h1 class="post_title">
+		<a href="{{ include.url }}">{{ include.title }}</a>
+	</h1>
+	<span class="post_author">
+		{% if include.author %}
+			글쓴이: {{ include.author }}
+		{% endif %}
+	</span>
+	{% if include.tags.size > 0 %}
+		<div class="post_tags">
+			{% for tag in include.tags %}
+				<span class="post_tag">#{{ tag }}</span>
+			{% endfor %}
+		</div>
+	{% endif %}
+</header>

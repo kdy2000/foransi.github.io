@@ -3,21 +3,14 @@ layout: default
 ---
 
 <article class="component">
-	<header class="post_header">
-		<span class="post_categories">{{ page.categories | join: ' ' }}</span>
-		<span class="post_date">{{ page.date }}</span>
-		<h1 class="post_title">{{ page.title }}</h1>
-		<span class="post_author">
-			{% if page.author %}
-				글쓴이: {{ page.author }}
-			{% endif %}
-		</span>
-		<div class="post_tags">
-			{% for tag in page.tags %}
-			<span class="post_tag">#{{ tag }}</span>
-			{% endfor %}
-		</div>
-	</header>
+	{% include post_header.html
+	url=page.url
+	categories=page.categories
+	date=page.date
+	title=page.title
+	author=page.author
+	tags=page.tags
+	%}
 	<section class="post_content">
 		{{ content }}
 	</section>

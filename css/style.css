@@ -43,15 +43,18 @@ body {
 
 	body > div#sidebar {
 		flex-basis: auto;
-		padding: 25px;
+		padding: 15px;
 	}
 
 	div#sidebar nav {
-		margin-top: 25px;
+		margin-top: 10px;
 	}
 
 	#logo {
-		height: 70px;
+		height: 30px;
+	}
+	#slogun {
+		font-size: 12px;
 	}
 
 	main > div#banner {
@@ -66,6 +69,7 @@ body {
 		flex-wrap: wrap;
 	}
 	ul#categories li {
+		font-size: 15px;
 		display: inline-block;
 		padding-right: 40px;
 	}
@@ -128,24 +132,23 @@ nav {
 	padding: 10px;
 	list-style-type: none;
 	font-size: 17pt;
-	/* font-weight: lighter; */
 	border-radius: 5px;
-	/* cursor: pointer; */
 
-	transition: background-color 0.2s, color 0.2s;
+	transition: initial;
 }
 #categories li a {
 	position: relative;
 	left: 0px;
-	transition: color 0.2s, left 0.2s;
 }
 #categories li:hover {
 	background-color: var(--ansi-white);
 	color: var(--ansi-black);
+	transition: background-color 0.2s, color 0.2s;
 }
 #categories li:hover a {
 	color: var(--ansi-black);
 	left: 15px;
+	transition: color 0.2s, left 0.2s;
 }
 
 main {

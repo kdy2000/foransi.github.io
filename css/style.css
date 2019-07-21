@@ -393,7 +393,7 @@ code .si {
 }
 
 .paginator_previous, .paginator_next {
-	flex: 3;
+	flex: 1;
 }
 .paginator_previous a:link, .paginator_previous a:visited
 , .paginator_next a:link, .paginator_next a:visited {
@@ -402,8 +402,7 @@ code .si {
 
 .paginator_current {
 	text-align: center;
-
-	flex: 1;
+	margin: 0 25px;
 }
 .paginator_previous {
 	text-align: right;

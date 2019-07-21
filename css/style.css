@@ -319,7 +319,7 @@ footer #externals *, footer #copyright {
 	margin-top: 0;
 }
 
-.post_tag {
+.post_tag, .post_tag:link, .post_tag:visited, post_tag:hover {
 	border-radius: 5px;
 	background-color: var(--ansi-brown);
 	padding: 1px 5px;

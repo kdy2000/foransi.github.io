@@ -10,7 +10,7 @@
 
 a, a:link, a:visited, a:hover, a:active {
 	text-decoration: none;
-	color: var(--ansi-white);
+	color: var(--ansi-black);
 }
 
 h1, h2, h3 {
@@ -52,6 +52,7 @@ body {
 
 	#logo {
 		height: 30px;
+		margin: 10px 0;
 	}
 	#slogun {
 		font-size: 12px;
@@ -80,7 +81,7 @@ body {
 	ul#categories li:hover a {
 		color: var(--ansi-black);
 		left: 0px;
-		bottom: 10px;
+		bottom: 5px;
 		transition: color 0.2s, bottom 0.2s;
 	}
 
@@ -174,7 +175,28 @@ main > .component {
 }
 
 main footer {
+	padding: 25px;
+
+	background-color: var(--ansi-black);
+	color: white;
+
 	text-align: center;
+	font-size: 14px;
+}
+
+main footer a, main footer a:link, main footer a:visited, main footer a:hover {
+	color: white;
+}
+
+footer #externals {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+footer #externals *, footer #copyright {
+	margin: 10px;
 }
 
 @keyframes showup {
@@ -244,11 +266,23 @@ main footer {
 .post_categories {
 	float: left;
 	margin: 10px 0;
+
+	border-radius: 5px;
+	background-color: var(--ansi-cyan);
+	padding: 1px 5px;
+	color: white;
+	box-sizing: border-box;
 }
 
 .post_date {
 	float: right;
 	margin: 10px 0;
+
+	border-radius: 5px;
+	background-color: var(--ansi-green);
+	padding: 1px 5px;
+	color: white;
+	box-sizing: border-box;
 }
 
 .post_title {
@@ -257,6 +291,8 @@ main footer {
 	/* padding: 10px 0; */
 	margin: 15px 0;
 	color: var(--ansi-black);
+
+	font-weight: bold;
 }
 
 .post_title a:link, .post_title a:visited {
@@ -269,6 +305,12 @@ main footer {
 	float: right;
 	margin: 15px 0;
 	margin-top: 0;
+
+	border-radius: 5px;
+	background-color: var(--ansi-brown);
+	padding: 1px 5px;
+	color: white;
+	box-sizing: border-box;
 }
 
 .post_tags {
@@ -282,7 +324,7 @@ main footer {
 	background-color: var(--ansi-brown);
 	padding: 1px 5px;
 	/* font-size: 10pt; */
-	color: var(--ansi-white);
+	color: white;
 	box-sizing: border-box;
 }
 
@@ -344,6 +386,10 @@ code .si {
 .paginator {
 	display: flex;
 	flex-direction: row;
+
+	padding: 25px;
+	margin: 25px 0;
+	color: var(--ansi-black);
 }
 
 .paginator_previous, .paginator_next {
@@ -364,6 +410,16 @@ code .si {
 }
 .paginator_next {
 	text-align: left;
+}
+
+.page_seperator {
+	font-weight: 900;
+	margin: 0 5px;
+}
+.paginator_button, .page_num {
+	border-radius: 5px;
+	background-color: white;
+	padding: 5px 13px;
 }
 
 .executives .year, .members .year, .history_year {
@@ -417,4 +473,17 @@ code .si {
 }
 #introduction section > :first-child {
 	margin-right: 50px;
+}
+
+.post_list a, .post_list a:visited {
+	color: var(--ansi-black);
+}
+
+.tag_title {
+	border-radius: 5px;
+	background-color: var(--ansi-brown);
+	padding: 3px 7px;
+}
+.tag_title a {
+	color: white;
 }

@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<div class="component">
+	<h1>태그</h1>
+
+	{% for tag in site.tags %}
+	<h2 id="{{ tag | first }}" class="tag_title">
+		<a href="/tags#{{ tag | first }}">#{{ tag | first }}</a>
+	</h2>
+	{% assign tag_posts = tag | last %}
+	<ul>
+		{% for post in tag_posts %}
+		<li>
+			<a href="{{ post.url }}">{{ post.title }}</a>
+		</li>
+		{% endfor %}
+	</ul>
+	{% endfor %}
+</div>

@@ -1,19 +1,25 @@
-<div class="paginator component">
+<div class="paginator">
 	{% if paginator %}
 
-	<span class="paginator_previous">
-		{% if paginator.previous_page %}
-		<a href="{{ paginator.previous_page_path }}">Previous</a>
-		{% endif %}
-	</span>
+		<span class="paginator_previous">
+			{% if paginator.previous_page %}
+				<span class="paginator_button">
+					<a href="{{ paginator.previous_page_path }}">Previous</a>
+				</span>
+			{% endif %}
+		</span>
 
 	<span class="paginator_current">
-		{{ paginator.page }} / {{ paginator.total_pages }}
+		<span class="page_num">{{ paginator.page }}</span>
+		<span class="page_seperator">/</span>
+		<span class="page_num">{{ paginator.total_pages }}</span>
 	</span>
 
 	<span class="paginator_next">
 		{% if paginator.next_page %}
-		<a href="{{ paginator.next_page_path }}">Next</a>
+			<span class="paginator_button">
+				<a href="{{ paginator.next_page_path }}">Next</a>
+			</span>
 		{% endif %}
 	</span>
 

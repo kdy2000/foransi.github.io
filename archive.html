@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<div class="component">
+	<h1>아카이브</h1>
+
+	<ul class="post_list">
+		{% for post in site.posts %}
+		<li>
+			<a href="{{ post.url }}">{{ post.title }}</a>
+		</li>
+		{% endfor %}
+	</ul>
+</div>

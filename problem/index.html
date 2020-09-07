@@ -1,11 +1,11 @@
 ---
 layout: default
-title: 전체 글
+title: 문제풀이
 ---
 
 {% include paginator.html %}
 
-{% for post in paginator.posts %}
+{% for post in site.categories.problem %}
 <div class="post_preview component">
 	{% include post_header.html
 	url=post.url

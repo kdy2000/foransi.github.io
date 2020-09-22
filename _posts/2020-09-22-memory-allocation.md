@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "memory allocation은 무엇일까?"
+title: "memory allocation"
 date: 2020-09-22
 author: 주진형
 categories: study

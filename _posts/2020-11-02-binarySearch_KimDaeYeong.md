@@ -43,16 +43,16 @@ for(int i = 0; i < n; i++){
 > <p align="center">즉 [0, 1, 2, 3, 4, 5, 6] 인덱스 중에 원하는 위치가 있습니다.</p>
 >
 >2. index  2 선택 : value가 2 입니다. 3보다 작습니다. 자연스럽게 index 0, 1은 볼 필요가 없게 됩니다. 
-><center>이제 후보군은 [3, 4, 5, 6] 이 됩니다.</center>
+> <p align="center">이제 후보군은 [3, 4, 5, 6] 이 됩니다.</p>
 >
 >3. index 6 선택 : value가 5 입니다. 3 보다 크네요. 후보군에서 index 6 만을 제거해줍니다. 
-><center>[3, 4, 5] 가 남았습니다.</center>
+> <p align="center">[3, 4, 5] 가 남았습니다.</p>
 >
 >4. index 5 선택 : value가 4 입니다. 3 보다 큽니다. 그러니 후보군에서 제거해줍니다. 
-><center>[3, 4] 가 남았습니다.</center>
+> <p align="center">[3, 4] 가 남았습니다.</p>
 >
 >5. index 4 선택 : value가 4 입니다. 3 보다 큽니다. 그러니 후보군에서 제거해줍니다.
-><center>[3] 가 남았습니다.</center>
+> <p align="center">[3] 가 남았습니다.</p>
 >
 >6. index 3 선택 : value가 3 입니다.!!! 원하는 값을 찾았습니다. 정답은 index 3 였습니다!
 
@@ -185,10 +185,10 @@ k번째 확인후에는 \frac{n}{2^{k}} 개로 줄어듭니다.
 
 x번째를 확인하고 나서, 1개밖에 남지 않았다고 해보겠습니다. (저희는 이 x가 무엇인지 궁금합니다.)
 
-><center>\frac{n}{2^{x}} = 1</center>
+><p align="center">\frac{n}{2^{x}} = 1</p>
 >
-><center>n = 2^{x}</center>
+><p align="center">n = 2^{x}</p>
 >
-><center>x = log_{2}(n)</center>
+><p align="center">x = log_{2}(n)</p>
 
 즉 원소개 갯수가 n개라면, 거기에 더불어 이 원소가 정렬되어 있다면, log_{2}(n)만에 원하는 값을 찾을 수 있습니다. (앞에서부터 탐색하는 경우는 O(n)입니다.)

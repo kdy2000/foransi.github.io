@@ -1,3 +1,14 @@
+---
+layout: post
+title: "이분탐색 (binary search)"
+date: 2020-11-03
+author: 김대영
+categories: algorithm
+tags: 이분탐색
+---
+
+<!--more-->
+
 ## 이분탐색 (binary search)
 
 주제에 들어가기 앞서, 자주 일어나는 상황을 하나 가정해 보겠습니다. 

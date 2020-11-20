@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: "이분탐색 (binary search)"
